@@ -1,0 +1,5 @@
+# 共享记忆索引 (L0)
+- 用户画像 (user-profile.md): 存储 JJ 的基本信息、偏好、工作背景 (P0)
+- 任务状态 (active-tasks.md): 当前正在进行的跨 Agent 协作任务 (P1)
+- 协作日志 (cross-agent-log.md): 记录各 Agent 完成的关键里程碑 (P1/P2)
+- 系统知识 (system-config.md): 共享的工具配置与模型偏好 (P0)

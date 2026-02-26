@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@hyperspell/openclaw-hyperspell": "^0.5.0",
+    "exa-skill": "file:skills/exa"
+  }
+}

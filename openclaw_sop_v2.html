@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw - 开启你的数字大脑</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-gray-200 min-h-screen flex flex-col items-center py-12 px-4">
+    <header class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="text-blue-500">OpenClaw:</span> 3分钟开启你的数字大脑
+        </h1>
+        <p class="text-gray-400 text-lg">让 AI 真正接管繁琐，让数据永远属于你自己。</p>
+    </header>
+
+    <!-- Stepper -->
+    <div class="w-full max-w-3xl mb-12 flex items-center justify-between relative px-8">
+        <div class="flex flex-col items-center z-10">
+            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold">1</div>
+            <span class="text-xs mt-2 text-blue-400">基础设定</span>
+        </div>
+        <div class="flex-1 h-0.5 bg-blue-600 mx-4"></div>
+        <div class="flex flex-col items-center z-10">
+            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold">2</div>
+            <span class="text-xs mt-2 text-blue-400">平台接入</span>
+        </div>
+        <div class="flex-1 h-0.5 bg-gray-800 mx-4"></div>
+        <div class="flex flex-col items-center z-10 opacity-50">
+            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center font-bold text-gray-500">3</div>
+            <span class="text-xs mt-2">模型配置</span>
+        </div>
+    </div>
+
+    <!-- Main Card -->
+    <main class="w-full max-w-2xl bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-2xl">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-2">Step 2: 飞书桥接</h2>
+            <p class="text-gray-400 text-sm italic">“最好的销售是帮客户做决策。” —— 根据 April Dunford 的叙事逻辑设计</p>
+        </div>
+
+        <div class="space-y-6">
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <label class="block text-sm font-medium text-gray-300">飞书 App ID</label>
+                    <a href="https://open.feishu.cn/app" target="_blank" class="text-xs text-blue-400 hover:underline">如何获取？</a>
+                </div>
+                <input type="text" placeholder="cli_xxxxxxxxxx" class="w-full bg-gray-950 border border-gray-700 rounded-lg py-3 px-4 focus:ring-2 focus:ring-blue-500 text-gray-100">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">飞书 App Secret</label>
+                <input type="password" placeholder="••••••••••••••••" class="w-full bg-gray-950 border border-gray-700 rounded-lg py-3 px-4 focus:ring-2 focus:ring-blue-500 text-gray-100">
+            </div>
+
+            <div class="bg-blue-900/10 border border-blue-900/30 rounded-lg p-4">
+                <p class="text-sm text-blue-200">
+                    💡 <strong>隐私承诺</strong>：你的密钥仅保存在本地 Docker 容器中。我们不是租用云端服务，而是帮你搭建属于你自己的城堡。
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-10 flex justify-between items-center">
+            <button class="text-gray-400 hover:text-white transition-colors">上一步</button>
+            <button class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg shadow-blue-600/20">
+                测试连接并继续
+            </button>
+        </div>
+    </main>
+
+    <footer class="mt-12 text-gray-500 text-xs text-center">
+        <p>© 2026 OpenClaw. 保持独立，掌控数据。</p>
+    </footer>
+</body>
+</html>

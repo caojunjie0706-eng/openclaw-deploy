@@ -1,0 +1,14 @@
+[
+  {
+    "name": "next_auth",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZDIxNzBiMzAtMTJhOC00MzMwLWE5NjgtYjUxMzRlN2YxNWM5IiwicGhvbmUiOiIxODUwMTk2NTg5OSIsIm5pY2tuYW1lIjoiSkoiLCJrZXkiOjE4MTUzODUwNDMsImlhdCI6MTc3MjAwMDQzNCwiZXhwIjoxNzc0NTkyNDM0fQ.RhL3mhUnp-4LbuAP1MzHiei5RfSmE7yzzSuDxr4cFNM",
+    "domain": "flowus.cn",
+    "path": "/"
+  },
+  {
+    "name": "next_auth.sig",
+    "value": "97J4e6SswJku9jv6Yts-lFDEcW2PC8K_VARvTReE7yM",
+    "domain": "flowus.cn",
+    "path": "/"
+  }
+]
