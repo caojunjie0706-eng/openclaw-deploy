@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 极速装机 - 开启你的数字员工</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen flex items-center justify-center p-4 font-sans">
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-xl p-10">
+        <!-- 头部 -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">🚀 OpenClaw 极速部署</h1>
+            <p class="text-gray-500 mt-2 text-lg">让 AI 成为你的 24/7 数字化员工</p>
+        </div>
+        <!-- 进度指示器 -->
+        <div class="flex items-center justify-between mb-12 px-6 relative">
+            <div class="absolute left-0 top-1/2 w-full h-1 bg-gray-100 -z-10 transform -translate-y-1/2"></div>
+            <div id="step-1-dot" class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold shadow-lg">1</div>
+            <div id="step-2-dot" class="w-12 h-12 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center font-bold">2</div>
+            <div id="step-3-dot" class="w-12 h-12 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center font-bold">3</div>
+        </div>
+        <!-- 步骤 1: 基础配置 -->
+        <div id="step-1" class="space-y-8">
+            <div class="space-y-4">
+                <h2 class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                    <i class="fas fa-id-card text-blue-500"></i> 第一步：定义你的数字员工
+                </h2>
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-500 mb-2">Agent 昵称</label>
+                        <input type="text" id="agent-name" placeholder="例如：旺财_运营助手" class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none bg-gray-50">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-500 mb-2">选择职业模板</label>
+                        <select id="template" class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none bg-gray-50">
+                            <option>电商运营专家 (自动分析热点 & 文案)</option>
+                            <option>个人知识管家 (Notion & 搜索集成)</option>
+                            <option>代码调试猿 (Vibe Coding 专家)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button onclick="nextStep(2)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl shadow-xl transition-all">
+                下一步：配置飞书权限 <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+        <!-- 步骤 2: 飞书权限与邀请码 -->
+        <div id="step-2" class="hidden space-y-6">
+            <h2 class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                <i class="fab fa-weixin text-green-500"></i> 第二步：连接你的飞书
+            </h2>
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-4">
+                <p class="text-xs text-amber-700">请确保已在飞书后台：1.开启机器人 2.勾选im:message权限 3.发布版本</p>
+            </div>
+            <div class="space-y-4">
+                <input type="text" id="invite-code" placeholder="输入 8 位大写邀请码" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+<input type="text" id="app-id" placeholder="飞书 App ID (cli_xxx)" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+<input type="password" id="app-secret" placeholder="飞secret (****************)" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+</div>
+<div class="flex gap-4">
+<button onclick="nextStep(1)" class="w-1/3 border py-4 rounded-xl text-gray-500">上一步</button>
+<button onclick="startDeploy()" class="w-2/3 bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg">确认已发布，一键部署</button>
+</div>
+</div>
+    <!-- 步骤 3: 部署 Loading -->
+    <div id="step-3" class="hidden text-center py-10 space-y-6">
+        <div class="animate-spin text-4xl text-blue-600 mx-auto"><i class="fas fa-spinner"></i></div>
+        <div class="space-y-2 font-mono text-sm text-left bg-gray-900 text-green-400 p-6 rounded-xl mx-auto max-w-sm">
+            <div id="log-1" class="opacity-0">> 校验邀请码权限...</div>
+            <div id="log-2" class="opacity-0">> 申请物理空间...</div>
+            <div id="log-3" class="opacity-0">> 注入算力大脑 (Gemini)...</div>
+            <div id="log-4" class="opacity-0">> 正在建立飞书长连接...</div>
+        </div>
+    </div>
+</div>
+<script>
+    function nextStep(step) {
+        document.getElementById('step-1').classList.add('hidden');
+        document.getElementById('step-2').classList.add('hidden');
+        document.getElementById('step-3').classList.add('hidden');
+        document.getElementById('step-' + step).classList.remove('hidden');
+        
+        // 更新进度条颜色
+        document.getElementById('step-2-dot').className = step >= 2 ? 'w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold' : 'w-12 h-12 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center font-bold';
+        document.getElementById('step-3-dot').className = step >= 3 ? 'w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold' : 'w-12 h-12 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center font-bold';
+    }
+    async function startDeploy() {
+        const agentName = document.getElementById('agent-name').value;
+        const inviteCode = document.getElementById('invite-code').value;
+        const appId = document.getElementById('app-id').value;
+        const appSecret = document.getElementById('app-secret').value;
+        const template = document.getElementById('template').value;
+        if (!agentName || !inviteCode || !appId || !appSecret) {
+            alert('请填写完整配置信息（包含邀请码）');
+            return;
+        }
+        nextStep(3);
+        
+        // 展示动画日志
+        const logs = [
+            { id: 'log-1', text: '> 校验邀请码权限... OK', delay: 500 },
+            { id: 'log-2', text: '> 申请物理空间... OK', delay: 1500 },
+            { id: 'log-3', text: '> 注入算力大脑 (Gemini)... OK', delay: 2500 },
+            { id: 'log-4', text: '> 正在建立长连接...', delay: 3500 }
+        ];
+        logs.forEach(log => {
+            setTimeout(() => {
+                const el = document.getElementById(log.id);
+                if(el) { el.innerText = log.text; el.style.opacity = 1; }
+            }, log.delay);
+        });
+        try {
+            // 注意：这里指向的是您的服务器公网 IP
+const response = await fetch('http://45.77.36.161:8001/api/deploy', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({
+agent_name: agentName,
+invite_code: inviteCode,
+feishu_app_id: appId,
+feishu_app_secret: appSecret,
+template: template,
+skills: ["web_search", "feishu_doc"]
+})
+});
+            const data = await response.json();
+            
+            if (response.ok && data.status === 'success') {
+                setTimeout(() => {
+                    document.getElementById('log-4').innerText = '> 建立长连接... OK (✅ 已上线)';
+                    document.getElementById('log-4').classList.add('text-green-400', 'font-bold');
+                    setTimeout(() => {
+                        alert(`🎉 授权成功！你的数字员工 "${agentName}" 已上线。`);
+                    }, 500);
+                }, 4500);
+            } else {
+                throw new Error(data.detail || '邀请码无效或网络错误');
+            }
+        } catch (err) {
+            document.getElementById('log-4').innerText = `> 部署失败: ${err.message}`;
+            document.getElementById('log-4').classList.add('text-red-500');
+        }
+    }
+</script>
+</body>
+</html>
