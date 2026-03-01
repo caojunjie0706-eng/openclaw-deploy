@@ -47,6 +47,16 @@ class DeployRequest(BaseModel):
     invite_code: str
     template: str
 
+@app.get("/api/generate_code")
+async def generate_code():
+    new_code = str(uuid.uuid4())[:8].upper()
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO codes (code) VALUES (?)", (new_code,))
+    conn.commit()
+    conn.close()
+    return {"invite_code": new_code}
+
 @app.post("/api/deploy")
 async def deploy(req: DeployRequest):
     conn = sqlite3.connect(DB_PATH)

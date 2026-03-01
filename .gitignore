@@ -2,3 +2,6 @@ node_modules/
 *.log
 *.tar.gz
 .DS_Store
+agents/*/.git
+agents/jj_real_test/
+agents/
