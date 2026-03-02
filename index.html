@@ -87,7 +87,7 @@
             };
 
             try {
-                const response = await fetch('/deploy', {
+                const response = await fetch('http://45.77.36.161:8000/deploy', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(data)
