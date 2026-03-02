@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenClaw - 正在为您部署</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-gray-200 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-md text-center">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">🦾 正在克隆您的数字员工...</h2>
+            <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                <div id="progress-bar" class="bg-blue-600 h-full w-0 transition-all duration-500"></div>
+            </div>
+        </div>
+        
+        <div id="status-logs" class="text-left font-mono text-xs text-gray-500 space-y-2 h-32 overflow-hidden bg-gray-900 p-4 rounded-lg border border-gray-800">
+            <p>> 正在建立加密隧道...</p>
+        </div>
+
+        <div id="final-action" class="mt-8 hidden">
+            <p class="text-green-400 mb-4">🎉 部署完成！请在飞书中查看。</p>
+            <button onclick="window.location.href='https://feishu.cn'" class="w-full bg-blue-600 py-3 rounded-xl font-bold">立即前往飞书</button>
+        </div>
+    </div>
+
+    <script>
+        const logs = [
+            "正在分配物理隔离沙箱...",
+            "正在注入 Gemini 算力大脑...",
+            "正在挂载飞书通联协议...",
+            "正在初始化本地存储...",
+            "数字员工已成功上线！"
+        ];
+        let step = 0;
+        const bar = document.getElementById('progress-bar');
+        const logBox = document.getElementById('status-logs');
+
+        const interval = setInterval(() => {
+            if (step < logs.length) {
+                const p = document.createElement('p');
+                p.innerText = "> " + logs[step];
+                p.className = "text-blue-400";
+                logBox.appendChild(p);
+                bar.style.width = ((step + 1) / logs.length * 100) + "%";
+                step++;
+            } else {
+                clearInterval(interval);
+                document.getElementById('final-action').classList.remove('hidden');
+            }
+        }, 1500);
+    </script>
+</body>
+</html>
