@@ -1,0 +1,16 @@
+{
+  "channels": {
+    "feishu": {
+      "appId": "cli_test123",
+      "appSecret": "sec_test456"
+    }
+  },
+  "agents": [
+    {
+      "identity": {
+        "name": "\u6d4b\u8bd5\u52a9\u7406-\u65fa\u8d22"
+      },
+      "model": "gemini-flash"
+    }
+  ]
+}

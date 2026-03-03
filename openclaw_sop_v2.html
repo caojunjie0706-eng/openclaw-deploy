@@ -45,12 +45,17 @@
                     <label class="block text-sm font-medium text-gray-300">飞书 App ID</label>
                     <a href="https://open.feishu.cn/app" target="_blank" class="text-xs text-blue-400 hover:underline">如何获取？</a>
                 </div>
-                <input type="text" placeholder="cli_xxxxxxxxxx" class="w-full bg-gray-950 border border-gray-700 rounded-lg py-3 px-4 focus:ring-2 focus:ring-blue-500 text-gray-100">
+                <input type="text" id="app_id" placeholder="cli_xxxxxxxxxx" class="w-full bg-gray-950 border border-gray-700 rounded-lg py-3 px-4 focus:ring-2 focus:ring-blue-500 text-gray-100">
             </div>
 
             <div>
                 <label class="block text-sm font-medium text-gray-300 mb-2">飞书 App Secret</label>
-                <input type="password" placeholder="••••••••••••••••" class="w-full bg-gray-950 border border-gray-700 rounded-lg py-3 px-4 focus:ring-2 focus:ring-blue-500 text-gray-100">
+                <input type="password" id="app_secret" placeholder="••••••••••••••••" class="w-full bg-gray-950 border border-gray-700 rounded-lg py-3 px-4 focus:ring-2 focus:ring-blue-500 text-gray-100">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">给你的 AI 命名</label>
+                <input type="text" id="agent_name" placeholder="例如：电商助手-旺财" class="w-full bg-gray-950 border border-gray-700 rounded-lg py-3 px-4 focus:ring-2 focus:ring-blue-500 text-gray-100">
             </div>
 
             <div class="bg-blue-900/10 border border-blue-900/30 rounded-lg p-4">
@@ -62,11 +67,47 @@
 
         <div class="mt-10 flex justify-between items-center">
             <button class="text-gray-400 hover:text-white transition-colors">上一步</button>
-            <button class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg shadow-blue-600/20">
+            <button id="deploy_btn" onclick="deployAgent()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg shadow-blue-600/20">
                 测试连接并继续
             </button>
         </div>
     </main>
+
+    <script>
+        async function deployAgent() {
+            const btn = document.getElementById('deploy_btn');
+            btn.innerText = "🚀 正在为您克隆数字员工...";
+            btn.disabled = true;
+
+            const data = {
+                user_id: "user-" + Math.random().toString(36).substring(7),
+                app_id: document.getElementById('app_id').value,
+                app_secret: document.getElementById('app_secret').value,
+                agent_name: document.getElementById('agent_name').value || "贾维斯"
+            };
+
+            try {
+                const response = await fetch('/deploy', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                if (result.status === "success") {
+                    alert("部署成功！您的端口是: " + result.port);
+                    window.location.href = "/success.html";
+                } else {
+                    alert("部署失败: " + result.detail);
+                }
+            } catch (error) {
+                alert("连接服务器失败，请检查后端 Provisioner 是否在运行。");
+            } finally {
+                btn.innerText = "测试连接并继续";
+                btn.disabled = false;
+            }
+        }
+    </script>
 
     <footer class="mt-12 text-gray-500 text-xs text-center">
         <p>© 2026 OpenClaw. 保持独立，掌控数据。</p>

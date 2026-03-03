@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@hyperspell/openclaw-hyperspell": "^0.5.0",
+    "@modelcontextprotocol/sdk": "^1.27.1",
     "exa-skill": "file:skills/exa"
   }
 }

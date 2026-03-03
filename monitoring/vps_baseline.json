@@ -1,0 +1,24 @@
+{
+  "baseline": {
+    "date": "2026-03-02 06:12:00 UTC",
+    "total_mem": "3.8Gi",
+    "cpu_cores": 2,
+    "total_disk": "120G",
+    "initial_used_mem": "1.2Gi",
+    "initial_used_disk": "20G"
+  },
+  "thresholds": {
+    "mem_warning_pct": 80,
+    "mem_critical_pct": 90,
+    "disk_warning_pct": 85,
+    "cpu_load_warning": 1.5
+  },
+  "monitoring_log": [
+    {
+      "timestamp": "2026-03-02 06:12:00 UTC",
+      "active_containers": 0,
+      "mem_used": "1.2Gi",
+      "status": "HEALTHY"
+    }
+  ]
+}

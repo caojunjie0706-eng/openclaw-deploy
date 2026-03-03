@@ -121,6 +121,7 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 
 **📝 Platform Formatting:**
 
+- **Feishu:** NEVER wrap document links in Markdown syntax `[title](url)`. Always send the raw URL on a new line to ensure it is clickable on all devices.
 - **Discord/WhatsApp:** No markdown tables! Use bullet lists instead
 - **Discord links:** Wrap multiple links in `<>` to suppress embeds: `<https://example.com>`
 - **WhatsApp:** No headers — use **bold** or CAPS for emphasis

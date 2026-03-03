@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  openclaw-agent-user-alpha:
+    image: openclaw-vibe:latest
+    container_name: openclaw-vibe-user-alpha
+    restart: always
+    mem_limit: 512m
+    cpus: 0.5
+    environment:
+      - OPENCLAW_USER_ID=user-alpha
+      - BRAVE_API_KEY=${BRAVE_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    ports:
+      - "3001:3000"
+    volumes:
+      # 物理隔离的核心：每个用户拥有独立的持久化空间
+      - ./data/user-alpha/workspace:/root/.openclaw/workspace
+      - ./data/user-alpha/config:/root/.openclaw/config
+    networks:
+      - openclaw-net
+
+networks:
+  openclaw-net:
+    driver: bridge

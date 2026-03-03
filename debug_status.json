@@ -1,0 +1,972 @@
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+{
+  "heartbeat": {
+    "defaultAgentId": "main",
+    "agents": [
+      {
+        "agentId": "main",
+        "enabled": true,
+        "every": "30m",
+        "everyMs": 1800000
+      },
+      {
+        "agentId": "_",
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null
+      },
+      {
+        "agentId": "_jj",
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null
+      },
+      {
+        "agentId": "_jj-_v2",
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null
+      },
+      {
+        "agentId": "coder",
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null
+      }
+    ]
+  },
+  "channelSummary": [
+    "Telegram: configured",
+    "  - default (token:config)",
+    "Feishu: configured",
+    "  - default"
+  ],
+  "queuedSystemEvents": [],
+  "sessions": {
+    "paths": [
+      "/root/.openclaw/agents/main/sessions/sessions.json",
+      "/root/.openclaw/agents/_/sessions/sessions.json",
+      "/root/.openclaw/agents/_jj/sessions/sessions.json",
+      "/root/.openclaw/agents/_jj-_v2/sessions/sessions.json",
+      "/root/.openclaw/agents/coder/sessions/sessions.json"
+    ],
+    "count": 9,
+    "defaults": {
+      "model": "gemini-3-flash-preview",
+      "contextTokens": 1048576
+    },
+    "recent": [
+      {
+        "agentId": "main",
+        "key": "agent:main:main",
+        "kind": "direct",
+        "sessionId": "512da948-dbcf-4363-a5c4-96dcc78b2060",
+        "updatedAt": 1772458310846,
+        "age": 38316,
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 380447,
+        "outputTokens": 451,
+        "cacheRead": 115151,
+        "cacheWrite": 0,
+        "totalTokens": 495598,
+        "totalTokensFresh": true,
+        "remainingTokens": 552978,
+        "percentUsed": 47,
+        "model": "gemini-3-flash-preview",
+        "contextTokens": 1048576,
+        "flags": [
+          "system",
+          "id:512da948-dbcf-4363-a5c4-96dcc78b2060"
+        ]
+      },
+      {
+        "agentId": "main",
+        "key": "agent:main:telegram:group:-1003738606791",
+        "kind": "group",
+        "sessionId": "5887f834-b533-4b30-a25c-6f5b3890fec5",
+        "updatedAt": 1772441130296,
+        "age": 17218866,
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 16951,
+        "outputTokens": 24,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 16951,
+        "totalTokensFresh": true,
+        "remainingTokens": 1031625,
+        "percentUsed": 2,
+        "model": "gemini-3-flash-preview",
+        "contextTokens": 1048576,
+        "flags": [
+          "system",
+          "id:5887f834-b533-4b30-a25c-6f5b3890fec5"
+        ]
+      },
+      {
+        "agentId": "main",
+        "key": "agent:main:cron:1b887e4f-4799-4dde-992c-073c854af2bb",
+        "kind": "direct",
+        "sessionId": "fead5a6a-32f3-43b6-a924-040a102ed395",
+        "updatedAt": 1772420400014,
+        "age": 37949148,
+        "systemSent": true,
+        "inputTokens": 28106,
+        "outputTokens": 181,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 14140,
+        "totalTokensFresh": true,
+        "remainingTokens": 1034436,
+        "percentUsed": 1,
+        "model": "gemini-3-flash-preview",
+        "contextTokens": 1048576,
+        "flags": [
+          "system",
+          "id:fead5a6a-32f3-43b6-a924-040a102ed395"
+        ]
+      },
+      {
+        "agentId": "main",
+        "key": "agent:main:cron:1b887e4f-4799-4dde-992c-073c854af2bb:run:fead5a6a-32f3-43b6-a924-040a102ed395",
+        "kind": "direct",
+        "sessionId": "fead5a6a-32f3-43b6-a924-040a102ed395",
+        "updatedAt": 1772420400014,
+        "age": 37949148,
+        "systemSent": true,
+        "inputTokens": 28106,
+        "outputTokens": 181,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 14140,
+        "totalTokensFresh": true,
+        "remainingTokens": 1034436,
+        "percentUsed": 1,
+        "model": "gemini-3-flash-preview",
+        "contextTokens": 1048576,
+        "flags": [
+          "system",
+          "id:fead5a6a-32f3-43b6-a924-040a102ed395"
+        ]
+      },
+      {
+        "agentId": "main",
+        "key": "agent:main:cron:53334de2-84c1-4de4-b755-918d179fdbf8",
+        "kind": "direct",
+        "sessionId": "1f01cf92-30f7-4ef2-99af-b0e33e976001",
+        "updatedAt": 1772413200025,
+        "age": 45149137,
+        "systemSent": true,
+        "inputTokens": 255951,
+        "outputTokens": 3907,
+        "cacheRead": 137782,
+        "cacheWrite": 0,
+        "totalTokens": 54680,
+        "totalTokensFresh": true,
+        "remainingTokens": 993896,
+        "percentUsed": 5,
+        "model": "gemini-3-flash-preview",
+        "contextTokens": 1048576,
+        "flags": [
+          "system",
+          "id:1f01cf92-30f7-4ef2-99af-b0e33e976001"
+        ]
+      },
+      {
+        "agentId": "main",
+        "key": "agent:main:cron:53334de2-84c1-4de4-b755-918d179fdbf8:run:1f01cf92-30f7-4ef2-99af-b0e33e976001",
+        "kind": "direct",
+        "sessionId": "1f01cf92-30f7-4ef2-99af-b0e33e976001",
+        "updatedAt": 1772413200025,
+        "age": 45149137,
+        "systemSent": true,
+        "inputTokens": 255951,
+        "outputTokens": 3907,
+        "cacheRead": 137782,
+        "cacheWrite": 0,
+        "totalTokens": 54680,
+        "totalTokensFresh": true,
+        "remainingTokens": 993896,
+        "percentUsed": 5,
+        "model": "gemini-3-flash-preview",
+        "contextTokens": 1048576,
+        "flags": [
+          "system",
+          "id:1f01cf92-30f7-4ef2-99af-b0e33e976001"
+        ]
+      },
+      {
+        "agentId": "main",
+        "key": "agent:main:feishu:group:oc_934f9dc0bf100f89dab4a9b581f681df",
+        "kind": "group",
+        "sessionId": "e1bfa256-89b0-4193-9128-880f3a75454c",
+        "updatedAt": 1772260905998,
+        "age": 197443164,
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 29736,
+        "outputTokens": 344,
+        "cacheRead": 24340,
+        "cacheWrite": 0,
+        "totalTokens": 54076,
+        "totalTokensFresh": true,
+        "remainingTokens": 994500,
+        "percentUsed": 5,
+        "model": "gemini-3-flash-preview",
+        "contextTokens": 1048576,
+        "flags": [
+          "system",
+          "id:e1bfa256-89b0-4193-9128-880f3a75454c"
+        ]
+      },
+      {
+        "agentId": "main",
+        "key": "agent:main:feishu:group:oc_09e1ad3bf973e782175a961c01599a11",
+        "kind": "group",
+        "sessionId": "eddf2a49-43a1-49f1-8560-20b2f5e952d0",
+        "updatedAt": 1771643036918,
+        "age": 815312244,
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 134443,
+        "outputTokens": 534,
+        "totalTokens": 37653,
+        "totalTokensFresh": true,
+        "remainingTokens": 162347,
+        "percentUsed": 19,
+        "model": "gemini-3-flash-preview",
+        "contextTokens": 200000,
+        "flags": [
+          "system",
+          "id:eddf2a49-43a1-49f1-8560-20b2f5e952d0"
+        ]
+      },
+      {
+        "agentId": "main",
+        "key": "agent:main:feishu:group:oc_09641470438ec6da48816c764e528b9b",
+        "kind": "group",
+        "sessionId": "da4886ea-2534-4feb-83b0-d0ce3347d1c2",
+        "updatedAt": 1771253230403,
+        "age": 1205118759,
+        "totalTokens": null,
+        "totalTokensFresh": false,
+        "remainingTokens": null,
+        "percentUsed": null,
+        "model": "gemini-3-flash-preview",
+        "contextTokens": 1048576,
+        "flags": [
+          "id:da4886ea-2534-4feb-83b0-d0ce3347d1c2"
+        ]
+      }
+    ],
+    "byAgent": [
+      {
+        "agentId": "main",
+        "path": "/root/.openclaw/agents/main/sessions/sessions.json",
+        "count": 9,
+        "recent": [
+          {
+            "agentId": "main",
+            "key": "agent:main:main",
+            "kind": "direct",
+            "sessionId": "512da948-dbcf-4363-a5c4-96dcc78b2060",
+            "updatedAt": 1772458310846,
+            "age": 38316,
+            "systemSent": true,
+            "abortedLastRun": false,
+            "inputTokens": 380447,
+            "outputTokens": 451,
+            "cacheRead": 115151,
+            "cacheWrite": 0,
+            "totalTokens": 495598,
+            "totalTokensFresh": true,
+            "remainingTokens": 552978,
+            "percentUsed": 47,
+            "model": "gemini-3-flash-preview",
+            "contextTokens": 1048576,
+            "flags": [
+              "system",
+              "id:512da948-dbcf-4363-a5c4-96dcc78b2060"
+            ]
+          },
+          {
+            "agentId": "main",
+            "key": "agent:main:telegram:group:-1003738606791",
+            "kind": "group",
+            "sessionId": "5887f834-b533-4b30-a25c-6f5b3890fec5",
+            "updatedAt": 1772441130296,
+            "age": 17218866,
+            "systemSent": true,
+            "abortedLastRun": false,
+            "inputTokens": 16951,
+            "outputTokens": 24,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 16951,
+            "totalTokensFresh": true,
+            "remainingTokens": 1031625,
+            "percentUsed": 2,
+            "model": "gemini-3-flash-preview",
+            "contextTokens": 1048576,
+            "flags": [
+              "system",
+              "id:5887f834-b533-4b30-a25c-6f5b3890fec5"
+            ]
+          },
+          {
+            "agentId": "main",
+            "key": "agent:main:cron:1b887e4f-4799-4dde-992c-073c854af2bb",
+            "kind": "direct",
+            "sessionId": "fead5a6a-32f3-43b6-a924-040a102ed395",
+            "updatedAt": 1772420400014,
+            "age": 37949148,
+            "systemSent": true,
+            "inputTokens": 28106,
+            "outputTokens": 181,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 14140,
+            "totalTokensFresh": true,
+            "remainingTokens": 1034436,
+            "percentUsed": 1,
+            "model": "gemini-3-flash-preview",
+            "contextTokens": 1048576,
+            "flags": [
+              "system",
+              "id:fead5a6a-32f3-43b6-a924-040a102ed395"
+            ]
+          },
+          {
+            "agentId": "main",
+            "key": "agent:main:cron:1b887e4f-4799-4dde-992c-073c854af2bb:run:fead5a6a-32f3-43b6-a924-040a102ed395",
+            "kind": "direct",
+            "sessionId": "fead5a6a-32f3-43b6-a924-040a102ed395",
+            "updatedAt": 1772420400014,
+            "age": 37949148,
+            "systemSent": true,
+            "inputTokens": 28106,
+            "outputTokens": 181,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 14140,
+            "totalTokensFresh": true,
+            "remainingTokens": 1034436,
+            "percentUsed": 1,
+            "model": "gemini-3-flash-preview",
+            "contextTokens": 1048576,
+            "flags": [
+              "system",
+              "id:fead5a6a-32f3-43b6-a924-040a102ed395"
+            ]
+          },
+          {
+            "agentId": "main",
+            "key": "agent:main:cron:53334de2-84c1-4de4-b755-918d179fdbf8",
+            "kind": "direct",
+            "sessionId": "1f01cf92-30f7-4ef2-99af-b0e33e976001",
+            "updatedAt": 1772413200025,
+            "age": 45149137,
+            "systemSent": true,
+            "inputTokens": 255951,
+            "outputTokens": 3907,
+            "cacheRead": 137782,
+            "cacheWrite": 0,
+            "totalTokens": 54680,
+            "totalTokensFresh": true,
+            "remainingTokens": 993896,
+            "percentUsed": 5,
+            "model": "gemini-3-flash-preview",
+            "contextTokens": 1048576,
+            "flags": [
+              "system",
+              "id:1f01cf92-30f7-4ef2-99af-b0e33e976001"
+            ]
+          },
+          {
+            "agentId": "main",
+            "key": "agent:main:cron:53334de2-84c1-4de4-b755-918d179fdbf8:run:1f01cf92-30f7-4ef2-99af-b0e33e976001",
+            "kind": "direct",
+            "sessionId": "1f01cf92-30f7-4ef2-99af-b0e33e976001",
+            "updatedAt": 1772413200025,
+            "age": 45149137,
+            "systemSent": true,
+            "inputTokens": 255951,
+            "outputTokens": 3907,
+            "cacheRead": 137782,
+            "cacheWrite": 0,
+            "totalTokens": 54680,
+            "totalTokensFresh": true,
+            "remainingTokens": 993896,
+            "percentUsed": 5,
+            "model": "gemini-3-flash-preview",
+            "contextTokens": 1048576,
+            "flags": [
+              "system",
+              "id:1f01cf92-30f7-4ef2-99af-b0e33e976001"
+            ]
+          },
+          {
+            "agentId": "main",
+            "key": "agent:main:feishu:group:oc_934f9dc0bf100f89dab4a9b581f681df",
+            "kind": "group",
+            "sessionId": "e1bfa256-89b0-4193-9128-880f3a75454c",
+            "updatedAt": 1772260905998,
+            "age": 197443164,
+            "systemSent": true,
+            "abortedLastRun": false,
+            "inputTokens": 29736,
+            "outputTokens": 344,
+            "cacheRead": 24340,
+            "cacheWrite": 0,
+            "totalTokens": 54076,
+            "totalTokensFresh": true,
+            "remainingTokens": 994500,
+            "percentUsed": 5,
+            "model": "gemini-3-flash-preview",
+            "contextTokens": 1048576,
+            "flags": [
+              "system",
+              "id:e1bfa256-89b0-4193-9128-880f3a75454c"
+            ]
+          },
+          {
+            "agentId": "main",
+            "key": "agent:main:feishu:group:oc_09e1ad3bf973e782175a961c01599a11",
+            "kind": "group",
+            "sessionId": "eddf2a49-43a1-49f1-8560-20b2f5e952d0",
+            "updatedAt": 1771643036918,
+            "age": 815312244,
+            "systemSent": true,
+            "abortedLastRun": false,
+            "inputTokens": 134443,
+            "outputTokens": 534,
+            "totalTokens": 37653,
+            "totalTokensFresh": true,
+            "remainingTokens": 162347,
+            "percentUsed": 19,
+            "model": "gemini-3-flash-preview",
+            "contextTokens": 200000,
+            "flags": [
+              "system",
+              "id:eddf2a49-43a1-49f1-8560-20b2f5e952d0"
+            ]
+          },
+          {
+            "agentId": "main",
+            "key": "agent:main:feishu:group:oc_09641470438ec6da48816c764e528b9b",
+            "kind": "group",
+            "sessionId": "da4886ea-2534-4feb-83b0-d0ce3347d1c2",
+            "updatedAt": 1771253230403,
+            "age": 1205118759,
+            "totalTokens": null,
+            "totalTokensFresh": false,
+            "remainingTokens": null,
+            "percentUsed": null,
+            "model": "gemini-3-flash-preview",
+            "contextTokens": 1048576,
+            "flags": [
+              "id:da4886ea-2534-4feb-83b0-d0ce3347d1c2"
+            ]
+          }
+        ]
+      },
+      {
+        "agentId": "_",
+        "path": "/root/.openclaw/agents/_/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      },
+      {
+        "agentId": "_jj",
+        "path": "/root/.openclaw/agents/_jj/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      },
+      {
+        "agentId": "_jj-_v2",
+        "path": "/root/.openclaw/agents/_jj-_v2/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      },
+      {
+        "agentId": "coder",
+        "path": "/root/.openclaw/agents/coder/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      }
+    ]
+  },
+  "os": {
+    "platform": "linux",
+    "arch": "x64",
+    "release": "6.8.0-101-generic",
+    "label": "linux 6.8.0-101-generic (x64)"
+  },
+  "update": {
+    "root": "/root/openclaw",
+    "installKind": "git",
+    "packageManager": "pnpm",
+    "git": {
+      "root": "/root/openclaw",
+      "sha": "b3f46f0e2891621467061e4c24851882609b2cbd",
+      "tag": null,
+      "branch": "main",
+      "upstream": "origin/main",
+      "dirty": true,
+      "ahead": 0,
+      "behind": 304,
+      "fetchOk": false
+    },
+    "deps": {
+      "manager": "pnpm",
+      "status": "ok",
+      "lockfilePath": "/root/openclaw/pnpm-lock.yaml",
+      "markerPath": "/root/openclaw/node_modules/.modules.yaml"
+    },
+    "registry": {
+      "latestVersion": "2026.3.1"
+    }
+  },
+  "updateChannel": "dev",
+  "updateChannelSource": "git-branch",
+  "memory": {
+    "agentId": "main",
+    "backend": "builtin",
+    "files": 50,
+    "chunks": 59,
+    "dirty": false,
+    "workspaceDir": "/root/.openclaw/workspace",
+    "dbPath": "/root/.openclaw/memory/main.sqlite",
+    "provider": "gemini",
+    "model": "gemini-embedding-001",
+    "requestedProvider": "auto",
+    "sources": [
+      "memory"
+    ],
+    "extraPaths": [],
+    "sourceCounts": [
+      {
+        "source": "memory",
+        "files": 50,
+        "chunks": 59
+      }
+    ],
+    "cache": {
+      "enabled": true,
+      "entries": 113
+    },
+    "fts": {
+      "enabled": true,
+      "available": true
+    },
+    "vector": {
+      "enabled": true,
+      "available": true,
+      "extensionPath": "/root/openclaw/node_modules/.pnpm/sqlite-vec@0.1.7-alpha.2/node_modules/sqlite-vec-linux-x64/vec0.so",
+      "dims": 3072
+    },
+    "batch": {
+      "enabled": false,
+      "failures": 0,
+      "limit": 2,
+      "wait": true,
+      "concurrency": 2,
+      "pollIntervalMs": 2000,
+      "timeoutMs": 3600000
+    },
+    "custom": {
+      "searchMode": "hybrid"
+    }
+  },
+  "memoryPlugin": {
+    "enabled": true,
+    "slot": "memory-core"
+  },
+  "gateway": {
+    "mode": "local",
+    "url": "ws://127.0.0.1:18789",
+    "urlSource": "local loopback",
+    "misconfigured": false,
+    "reachable": true,
+    "connectLatencyMs": 41,
+    "self": {
+      "host": "openclaw-agent",
+      "ip": "45.77.36.161",
+      "version": "2026.2.25",
+      "platform": "linux 6.8.0-101-generic"
+    },
+    "error": null
+  },
+  "gatewayService": {
+    "label": "systemd",
+    "installed": true,
+    "loadedText": "enabled",
+    "runtimeShort": "running (pid 290389, state active)"
+  },
+  "nodeService": {
+    "label": "systemd",
+    "installed": false,
+    "loadedText": "disabled",
+    "runtimeShort": "stopped (state inactive)"
+  },
+  "agents": {
+    "defaultId": "main",
+    "agents": [
+      {
+        "id": "main",
+        "workspaceDir": "/root/.openclaw/workspace",
+        "bootstrapPending": false,
+        "sessionsPath": "/root/.openclaw/agents/main/sessions/sessions.json",
+        "sessionsCount": 9,
+        "lastUpdatedAt": 1772458310846,
+        "lastActiveAgeMs": 37461
+      },
+      {
+        "id": "_",
+        "name": "旺财_测试助手",
+        "workspaceDir": "/root/.openclaw/workspace/agents/test_agent",
+        "bootstrapPending": true,
+        "sessionsPath": "/root/.openclaw/agents/_/sessions/sessions.json",
+        "sessionsCount": 0,
+        "lastUpdatedAt": null,
+        "lastActiveAgeMs": null
+      },
+      {
+        "id": "_jj",
+        "name": "旺财_JJ实测",
+        "workspaceDir": "/root/.openclaw/workspace/agents/jj_real_test",
+        "bootstrapPending": true,
+        "sessionsPath": "/root/.openclaw/agents/_jj/sessions/sessions.json",
+        "sessionsCount": 0,
+        "lastUpdatedAt": null,
+        "lastActiveAgeMs": null
+      },
+      {
+        "id": "_jj-_v2",
+        "name": "旺财_JJ实测_v2",
+        "workspaceDir": "/root/.openclaw/workspace/agents/jj_real_test_v2",
+        "bootstrapPending": true,
+        "sessionsPath": "/root/.openclaw/agents/_jj-_v2/sessions/sessions.json",
+        "sessionsCount": 0,
+        "lastUpdatedAt": null,
+        "lastActiveAgeMs": null
+      },
+      {
+        "id": "coder",
+        "name": "coder",
+        "workspaceDir": "/root/.openclaw/workspace",
+        "bootstrapPending": false,
+        "sessionsPath": "/root/.openclaw/agents/coder/sessions/sessions.json",
+        "sessionsCount": 0,
+        "lastUpdatedAt": null,
+        "lastActiveAgeMs": null
+      }
+    ],
+    "totalSessions": 9,
+    "bootstrapPendingCount": 3
+  },
+  "securityAudit": {
+    "ts": 1772458349199,
+    "summary": {
+      "critical": 1,
+      "warn": 3,
+      "info": 1
+    },
+    "findings": [
+      {
+        "checkId": "summary.attack_surface",
+        "severity": "info",
+        "title": "Attack surface summary",
+        "detail": "groups: open=0, allowlist=1\ntools.elevated: enabled\nhooks.webhooks: disabled\nhooks.internal: disabled\nbrowser control: enabled\ntrust model: personal assistant (one trusted operator boundary), not hostile multi-tenant on one shared gateway"
+      },
+      {
+        "checkId": "gateway.trusted_proxies_missing",
+        "severity": "warn",
+        "title": "Reverse proxy headers are not trusted",
+        "detail": "gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client checks cannot be spoofed.",
+        "remediation": "Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only."
+      },
+      {
+        "checkId": "models.weak_tier",
+        "severity": "warn",
+        "title": "Some configured models are below recommended tiers",
+        "detail": "Smaller/older models are generally more susceptible to prompt injection and tool misuse.\n- claude-proxy (Below Claude 4.5) @ agents.list.coder.model",
+        "remediation": "Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+."
+      },
+      {
+        "checkId": "plugins.extensions_no_allowlist",
+        "severity": "critical",
+        "title": "Extensions exist but plugins.allow is not set",
+        "detail": "Found 1 extension(s) under /root/.openclaw/extensions. Without plugins.allow, any discovered plugin id may load (depending on config and plugin behavior).\nNative skill commands are enabled on at least one configured chat surface; treat unpinned/unallowlisted extensions as high risk.",
+        "remediation": "Set plugins.allow to an explicit list of plugin ids you trust."
+      },
+      {
+        "checkId": "plugins.tools_reachable_permissive_policy",
+        "severity": "warn",
+        "title": "Extension plugin tools may be reachable under permissive tool policy",
+        "detail": "Enabled extension plugins: feishu.\nPermissive tool policy contexts:\n- default\n- agents.list.main\n- agents.list.coder\n- agents.list._\n- agents.list._jj\n- agents.list._jj-_v2",
+        "remediation": "Use restrictive profiles (`minimal`/`coding`) or explicit tool allowlists that exclude plugin tools for agents handling untrusted input."
+      }
+    ]
+  },
+  "health": {
+    "ok": true,
+    "ts": 1772458350269,
+    "durationMs": 1914,
+    "channels": {
+      "telegram": {
+        "configured": true,
+        "running": false,
+        "lastStartAt": null,
+        "lastStopAt": null,
+        "lastError": null,
+        "tokenSource": "none",
+        "probe": {
+          "ok": true,
+          "status": null,
+          "error": null,
+          "elapsedMs": 1710,
+          "bot": {
+            "id": 8682681950,
+            "username": "sodasue_bot",
+            "canJoinGroups": true,
+            "canReadAllGroupMessages": false,
+            "supportsInlineQueries": false
+          },
+          "webhook": {
+            "url": "",
+            "hasCustomCert": false
+          }
+        },
+        "lastProbeAt": 1772458350066,
+        "mode": null,
+        "accountId": "default",
+        "accounts": {
+          "default": {
+            "configured": true,
+            "running": false,
+            "lastStartAt": null,
+            "lastStopAt": null,
+            "lastError": null,
+            "tokenSource": "none",
+            "probe": {
+              "ok": true,
+              "status": null,
+              "error": null,
+              "elapsedMs": 1710,
+              "bot": {
+                "id": 8682681950,
+                "username": "sodasue_bot",
+                "canJoinGroups": true,
+                "canReadAllGroupMessages": false,
+                "supportsInlineQueries": false
+              },
+              "webhook": {
+                "url": "",
+                "hasCustomCert": false
+              }
+            },
+            "lastProbeAt": 1772458350066,
+            "mode": null,
+            "accountId": "default"
+          }
+        }
+      },
+      "feishu": {
+        "configured": true,
+        "running": false,
+        "lastStartAt": null,
+        "lastStopAt": null,
+        "lastError": null,
+        "port": null,
+        "probe": {
+          "ok": true,
+          "appId": "cli_a901a6d90038dbdb",
+          "botOpenId": "ou_5047add0d3049f834b79646454f34789"
+        },
+        "lastProbeAt": 1772458350269,
+        "accountId": "default",
+        "accounts": {
+          "default": {
+            "configured": true,
+            "running": false,
+            "lastStartAt": null,
+            "lastStopAt": null,
+            "lastError": null,
+            "port": null,
+            "probe": {
+              "ok": true,
+              "appId": "cli_a901a6d90038dbdb",
+              "botOpenId": "ou_5047add0d3049f834b79646454f34789"
+            },
+            "lastProbeAt": 1772458350269,
+            "accountId": "default"
+          }
+        }
+      }
+    },
+    "channelOrder": [
+      "telegram",
+      "feishu"
+    ],
+    "channelLabels": {
+      "telegram": "Telegram",
+      "feishu": "Feishu"
+    },
+    "heartbeatSeconds": 1800,
+    "defaultAgentId": "main",
+    "agents": [
+      {
+        "agentId": "main",
+        "isDefault": true,
+        "heartbeat": {
+          "enabled": true,
+          "every": "30m",
+          "everyMs": 1800000,
+          "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+          "target": "none",
+          "ackMaxChars": 300
+        },
+        "sessions": {
+          "path": "/root/.openclaw/agents/main/sessions/sessions.json",
+          "count": 9,
+          "recent": [
+            {
+              "key": "agent:main:main",
+              "updatedAt": 1772458310846,
+              "age": 37509
+            },
+            {
+              "key": "agent:main:telegram:group:-1003738606791",
+              "updatedAt": 1772441130296,
+              "age": 17218059
+            },
+            {
+              "key": "agent:main:cron:1b887e4f-4799-4dde-992c-073c854af2bb",
+              "updatedAt": 1772420400014,
+              "age": 37948341
+            },
+            {
+              "key": "agent:main:cron:1b887e4f-4799-4dde-992c-073c854af2bb:run:fead5a6a-32f3-43b6-a924-040a102ed395",
+              "updatedAt": 1772420400014,
+              "age": 37948341
+            },
+            {
+              "key": "agent:main:cron:53334de2-84c1-4de4-b755-918d179fdbf8",
+              "updatedAt": 1772413200025,
+              "age": 45148330
+            }
+          ]
+        }
+      },
+      {
+        "agentId": "coder",
+        "name": "coder",
+        "isDefault": false,
+        "heartbeat": {
+          "enabled": false,
+          "every": "disabled",
+          "everyMs": null,
+          "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+          "target": "none",
+          "ackMaxChars": 300
+        },
+        "sessions": {
+          "path": "/root/.openclaw/agents/coder/sessions/sessions.json",
+          "count": 0,
+          "recent": []
+        }
+      },
+      {
+        "agentId": "_",
+        "name": "旺财_测试助手",
+        "isDefault": false,
+        "heartbeat": {
+          "enabled": false,
+          "every": "disabled",
+          "everyMs": null,
+          "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+          "target": "none",
+          "ackMaxChars": 300
+        },
+        "sessions": {
+          "path": "/root/.openclaw/agents/_/sessions/sessions.json",
+          "count": 0,
+          "recent": []
+        }
+      },
+      {
+        "agentId": "_jj",
+        "name": "旺财_JJ实测",
+        "isDefault": false,
+        "heartbeat": {
+          "enabled": false,
+          "every": "disabled",
+          "everyMs": null,
+          "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+          "target": "none",
+          "ackMaxChars": 300
+        },
+        "sessions": {
+          "path": "/root/.openclaw/agents/_jj/sessions/sessions.json",
+          "count": 0,
+          "recent": []
+        }
+      },
+      {
+        "agentId": "_jj-_v2",
+        "name": "旺财_JJ实测_v2",
+        "isDefault": false,
+        "heartbeat": {
+          "enabled": false,
+          "every": "disabled",
+          "everyMs": null,
+          "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+          "target": "none",
+          "ackMaxChars": 300
+        },
+        "sessions": {
+          "path": "/root/.openclaw/agents/_jj-_v2/sessions/sessions.json",
+          "count": 0,
+          "recent": []
+        }
+      }
+    ],
+    "sessions": {
+      "path": "/root/.openclaw/agents/main/sessions/sessions.json",
+      "count": 9,
+      "recent": [
+        {
+          "key": "agent:main:main",
+          "updatedAt": 1772458310846,
+          "age": 37509
+        },
+        {
+          "key": "agent:main:telegram:group:-1003738606791",
+          "updatedAt": 1772441130296,
+          "age": 17218059
+        },
+        {
+          "key": "agent:main:cron:1b887e4f-4799-4dde-992c-073c854af2bb",
+          "updatedAt": 1772420400014,
+          "age": 37948341
+        },
+        {
+          "key": "agent:main:cron:1b887e4f-4799-4dde-992c-073c854af2bb:run:fead5a6a-32f3-43b6-a924-040a102ed395",
+          "updatedAt": 1772420400014,
+          "age": 37948341
+        },
+        {
+          "key": "agent:main:cron:53334de2-84c1-4de4-b755-918d179fdbf8",
+          "updatedAt": 1772413200025,
+          "age": 45148330
+        }
+      ]
+    }
+  },
+  "lastHeartbeat": null
+}
