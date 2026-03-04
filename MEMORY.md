@@ -52,3 +52,7 @@
 
 ## 04 产品 (Product) - 长期增长的唯一途径，是优质产品
 *暂无内容*
+
+## 05 迭代 (Iteration) - 持续进化的数字大脑
+- [2026-03-03] [元学习执行规约：建立 JARVIS 的九个核心原则](./memory/05_OpenClaw_Iter/meta_learning_protocol.md)
+- [2026-03-03] [一键 Docker 部署：打通商业化交付闭环 (deploy.sh)](./deploy.sh)
